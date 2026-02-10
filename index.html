@@ -2,15 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <title>Hỗ Trợ Free Fire</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hỗ Trợ Free Fire - Giảm Lag và Kéo Tâm</title>
+
     <style>
-        /* styles.css */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            background-color: #111;
             color: white;
         }
 
@@ -20,18 +19,13 @@
             text-align: center;
         }
 
-        header nav ul {
-            list-style-type: none;
-            padding: 0;
+        header h1 {
+            margin: 0;
         }
 
-        header nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
+        nav a {
             color: white;
+            margin: 0 10px;
             text-decoration: none;
         }
 
@@ -39,93 +33,89 @@
             padding: 20px;
         }
 
-        #features .feature {
-            margin: 20px 0;
+        h2 {
+            margin-top: 0;
         }
 
-        button {
-            background-color: #f44336;
+        /* NÚT GIỮA MÀN HÌNH */
+        .center-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+        }
+
+        #toggleBtn {
+            font-size: 22px;
+            padding: 15px 45px;
             border: none;
-            color: white;
-            padding: 10px 20px;
+            border-radius: 10px;
             cursor: pointer;
+            background-color: #00c853; /* xanh */
+            color: white;
+            transition: 0.3s;
         }
 
-        button:hover {
-            background-color: #d32f2f;
+        #toggleBtn:hover {
+            opacity: 0.85;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
             background-color: #333;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header>
-        <div class="logo">
-            <h1>Hỗ Trợ Free Fire</h1>
-        </div>
+        <h1>Hỗ Trợ Free Fire</h1>
         <nav>
-            <ul>
-                <li><a href="#tutorials">Hướng Dẫn</a></li>
-                <li><a href="#tools">Công Cụ</a></li>
-                <li><a href="#community">Cộng Đồng</a></li>
-            </ul>
+            <a href="#">Hướng Dẫn</a>
+            <a href="#">Công Cụ</a>
+            <a href="#">Cộng Đồng</a>
         </nav>
     </header>
 
-    <!-- Main Section -->
     <main>
-        <section id="intro">
-            <h2>Giảm Lag và Tăng Cường Kỹ Năng Kéo Tâm</h2>
-            <p>Chào mừng bạn đến với website hỗ trợ Free Fire. Tại đây, chúng tôi cung cấp các mẹo và công cụ giúp bạn giảm lag và tối ưu hóa trải nghiệm chơi game.</p>
-        </section>
+        <h2>Giảm Lag và Tăng Cường Kỹ Năng Kéo Tâm</h2>
+        <p>
+            Website hỗ trợ Free Fire giúp giảm lag, giảm rung tâm và tối ưu trải nghiệm chơi game.
+        </p>
 
-        <section id="features">
-            <h2>Các Tính Năng Chính</h2>
-            <div class="feature">
-                <h3>Giảm Lag</h3>
-                <p>Tối ưu hóa thiết bị và giảm độ trễ khi chơi Free Fire.</p>
-                <button onclick="toggleLag()">Tắt/Bật Giảm Lag</button>
-            </div>
-            <div class="feature">
-                <h3>Giảm Rung Tâm</h3>
-                <p>Cải thiện độ chính xác khi bắn và giảm hiện tượng rung tâm.</p>
-                <button onclick="toggleRungTam()">Tắt/Bật Giảm Rung Tâm</button>
-            </div>
-        </section>
-
-        <section id="community">
-            <h2>Cộng Đồng Người Chơi</h2>
-            <p>Tham gia diễn đàn để chia sẻ kinh nghiệm và thủ thuật với những người chơi khác.</p>
-            <a href="https://your-forum-link.com" target="_blank">
-                <button>Tham Gia Cộng Đồng</button>
-            </a>
-        </section>
+        <!-- NÚT BẬT / DỪNG -->
+        <div class="center-box">
+            <button id="toggleBtn" onclick="toggleFeature()">
+                🔵 BẬT
+            </button>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Hỗ Trợ Free Fire. All rights reserved.</p>
+        © 2026 Hỗ Trợ Free Fire. All rights reserved.
     </footer>
 
     <script>
-        // JavaScript for toggling features
-        let lagEnabled = false;
-        let rungTamEnabled = false;
+        let isOn = false;
 
-        function toggleLag() {
-            lagEnabled = !lagEnabled;
-            alert("Giảm Lag " + (lagEnabled ? "Bật" : "Tắt"));
-        }
+        function toggleFeature() {
+            const btn = document.getElementById("toggleBtn");
 
-        function toggleRungTam() {
-            rungTamEnabled = !rungTamEnabled;
-            alert("Giảm Rung Tâm " + (rungTamEnabled ? "Bật" : "Tắt"));
+            if (!isOn) {
+                alert("✅ BẬT THÀNH CÔNG");
+                btn.style.backgroundColor = "#e53935"; // đỏ
+                btn.innerHTML = "⛔ DỪNG";
+                isOn = true;
+            } else {
+                alert("⛔ ĐÃ DỪNG");
+                btn.style.backgroundColor = "#00c853"; // xanh
+                btn.innerHTML = "🔵 BẬT";
+                isOn = false;
+            }
         }
     </script>
+
 </body>
 </html>
