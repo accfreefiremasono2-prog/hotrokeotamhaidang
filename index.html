@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ Trợ Free Fire - Giảm Lag và Kéo Tâm</title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #features .feature {
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Hỗ Trợ Free Fire</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#tutorials">Hướng Dẫn</a></li>
+                <li><a href="#tools">Công Cụ</a></li>
+                <li><a href="#community">Cộng Đồng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section id="intro">
+            <h2>Giảm Lag và Tăng Cường Kỹ Năng Kéo Tâm</h2>
+            <p>Chào mừng bạn đến với website hỗ trợ Free Fire. Tại đây, chúng tôi cung cấp các mẹo và công cụ giúp bạn giảm lag và tối ưu hóa trải nghiệm chơi game.</p>
+        </section>
+
+        <section id="features">
+            <h2>Các Tính Năng Chính</h2>
+            <div class="feature">
+                <h3>Giảm Lag</h3>
+                <p>Tối ưu hóa thiết bị và giảm độ trễ khi chơi Free Fire.</p>
+                <button onclick="toggleLag()">Tắt/Bật Giảm Lag</button>
+            </div>
+            <div class="feature">
+                <h3>Giảm Rung Tâm</h3>
+                <p>Cải thiện độ chính xác khi bắn và giảm hiện tượng rung tâm.</p>
+                <button onclick="toggleRungTam()">Tắt/Bật Giảm Rung Tâm</button>
+            </div>
+        </section>
+
+        <section id="community">
+            <h2>Cộng Đồng Người Chơi</h2>
+            <p>Tham gia diễn đàn để chia sẻ kinh nghiệm và thủ thuật với những người chơi khác.</p>
+            <a href="https://your-forum-link.com" target="_blank">
+                <button>Tham Gia Cộng Đồng</button>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Hỗ Trợ Free Fire. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for toggling features
+        let lagEnabled = false;
+        let rungTamEnabled = false;
+
+        function toggleLag() {
+            lagEnabled = !lagEnabled;
+            alert("Giảm Lag " + (lagEnabled ? "Bật" : "Tắt"));
+        }
+
+        function toggleRungTam() {
+            rungTamEnabled = !rungTamEnabled;
+            alert("Giảm Rung Tâm " + (rungTamEnabled ? "Bật" : "Tắt"));
+        }
+    </script>
+</body>
+</html>
